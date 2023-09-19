@@ -15,6 +15,8 @@ function App() {
   };
 
   return (
+    <>
+    <div id="top"></div>
     <div className="App">
       <div id="content" ref={contentRef}>
         <Navbar />
@@ -23,7 +25,7 @@ function App() {
         <DisplaySection triggerPreview={handlePreview} />
       </div>
       <WebgiViewer contentRef={contentRef} ref={WebgiViewerRef} />
-    </div>
+    </div></>
   );
 }
 

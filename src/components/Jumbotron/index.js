@@ -12,6 +12,13 @@ const Jumbotron = () => {
   //     });
   //   };
 
+  const scrollToSound = () => {
+    const soundSection = document.querySelector('.sound-section');
+    if (soundSection) {
+      soundSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <div className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
@@ -25,7 +32,9 @@ const Jumbotron = () => {
           <button className="button">Buy</button>
         </li>
         <li>
-          <a className="link">Learn More</a>
+          <button className="link" onClick={() => {
+            scrollToSound();
+          }}>Learn More</button>
         </li>
       </ul>
       <img className="iphone-img" src={holdingIphone} alt="iPhone"></img>

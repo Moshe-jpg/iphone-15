@@ -1,6 +1,14 @@
 import React from "react";
 
 const DisplaySection = ({ triggerPreview }) => {
+
+  const scrollTotop = () => {
+    const topSection = document.getElementById('top');
+    if (topSection) {
+      topSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <div className="display-section wrapper">
       <h2 className="title">New</h2>
@@ -16,7 +24,9 @@ const DisplaySection = ({ triggerPreview }) => {
       >
         Try Me!
       </button>
-      <button className="back-button">Top</button>
+      <button className="back-button" onClick={() => {
+        scrollTotop();
+      }}>Top</button>
     </div>
   );
 };

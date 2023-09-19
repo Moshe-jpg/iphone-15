@@ -437,6 +437,7 @@ nav .link-styled {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .jumbotron-section .description,
