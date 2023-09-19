@@ -1,6 +1,6 @@
 import React from "react";
 
-const DisplaySection = () => {
+const DisplaySection = ({ triggerPreview }) => {
   return (
     <div className="display-section wrapper">
       <h2 className="title">New</h2>
@@ -8,7 +8,14 @@ const DisplaySection = () => {
       <span className="description">
         A display that's up to 2x brighter in the sun
       </span>
-      <button className="button">Try Me!</button>
+      <button
+        className="button"
+        onClick={() => {
+          triggerPreview();
+        }}
+      >
+        Try Me!
+      </button>
       <button className="back-button">Top</button>
     </div>
   );

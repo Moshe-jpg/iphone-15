@@ -1,22 +1,21 @@
 import React from "react";
-import iphone from "../../assets/images/iphone-14.jpg";
+// import iphone from "../../assets/images/iphone-14.jpg";
 import holdingIphone from "../../assets/images/iphone-hand.png";
 
 const Jumbotron = () => {
-
-//   const handleLearnMore = () => {
-//     const element = document.querySelector(".sound-section");
-//     window.scrollTo({
-//       top: element?.getBoundingClientRect,
-//       left: 0,
-//       behavior: "smooth"
-//     });
-//   };
+  //   const handleLearnMore = () => {
+  //     const element = document.querySelector(".sound-section");
+  //     window.scrollTo({
+  //       top: element?.getBoundingClientRect,
+  //       left: 0,
+  //       behavior: "smooth"
+  //     });
+  //   };
 
   return (
     <div className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
-      <img src={iphone} className="logo" alt="Iphone 15 Pro"></img>
+      <h3 className="title-header">iPhone 15 Pro</h3>
       <p className="text">Big & Bigger</p>
       <span className="description">
         From $1,000.00/mo or $22.00 before trade-in

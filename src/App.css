@@ -6,8 +6,16 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 button, a, li, ul, ol {
   all: unset;
+}
+
+button, a {
+  cursor: pointer;
 }
 
 body {
@@ -214,6 +222,12 @@ nav .link-styled {
   font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.022em;
+}
+
+.jumbotron-section .title-header {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
 }
 
 .jumbotron-section .logo {
