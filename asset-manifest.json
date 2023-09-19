@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.482865a4.css",
-    "main.js": "/static/js/main.46b7e64c.js",
-    "static/js/787.011edcde.chunk.js": "/static/js/787.011edcde.chunk.js",
-    "static/media/iphone-hand.png": "/static/media/iphone-hand.8483615153f96b8884ad.png",
-    "static/media/logo.svg": "/static/media/logo.1fc4090ab1266e50362f66018391e9f3.svg",
-    "index.html": "/index.html",
-    "static/media/store.svg": "/static/media/store.57ae54d1966c84d102bc33daea9a2b3f.svg",
-    "static/media/search.svg": "/static/media/search.fb9cc63e85e6aac735d070a707f288ad.svg",
-    "main.482865a4.css.map": "/static/css/main.482865a4.css.map",
-    "main.46b7e64c.js.map": "/static/js/main.46b7e64c.js.map",
-    "787.011edcde.chunk.js.map": "/static/js/787.011edcde.chunk.js.map"
+    "main.css": "//iphone-15/static/css/main.482865a4.css",
+    "main.js": "//iphone-15/static/js/main.e1a4b85a.js",
+    "static/js/787.011edcde.chunk.js": "//iphone-15/static/js/787.011edcde.chunk.js",
+    "static/media/iphone-hand.png": "//iphone-15/static/media/iphone-hand.8483615153f96b8884ad.png",
+    "static/media/logo.svg": "//iphone-15/static/media/logo.1fc4090ab1266e50362f66018391e9f3.svg",
+    "index.html": "//iphone-15/index.html",
+    "static/media/store.svg": "//iphone-15/static/media/store.57ae54d1966c84d102bc33daea9a2b3f.svg",
+    "static/media/search.svg": "//iphone-15/static/media/search.fb9cc63e85e6aac735d070a707f288ad.svg",
+    "main.482865a4.css.map": "//iphone-15/static/css/main.482865a4.css.map",
+    "main.e1a4b85a.js.map": "//iphone-15/static/js/main.e1a4b85a.js.map",
+    "787.011edcde.chunk.js.map": "//iphone-15/static/js/787.011edcde.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.482865a4.css",
-    "static/js/main.46b7e64c.js"
+    "static/js/main.e1a4b85a.js"
   ]
 }
