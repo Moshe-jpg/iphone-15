@@ -14,7 +14,7 @@ button, a, li, ul, ol {
   all: unset;
 }
 
-button, a {
+button, a, img[alt="Apple"], img[alt="search"], img[alt="store"] {
   cursor: pointer;
 }
 
@@ -289,7 +289,7 @@ nav .link-styled {
 
 .jumbotron-section .iphone-img {
   margin-right: -400px;
-  height: 516px;
+  height: 516.1px;
   position: absolute;
   bottom: 0;
 }
