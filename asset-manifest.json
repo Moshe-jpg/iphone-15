@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/iphone-15/static/css/main.3a610ff7.css",
-    "main.js": "/iphone-15/static/js/main.e1e7d00b.js",
+    "main.css": "/iphone-15/static/css/main.d5826189.css",
+    "main.js": "/iphone-15/static/js/main.ce690408.js",
     "static/js/787.0c452b35.chunk.js": "/iphone-15/static/js/787.0c452b35.chunk.js",
     "static/media/scene-black.glb": "/iphone-15/static/media/scene-black.f17f564303ac607bdc99.glb",
     "static/media/iphone-hand.png": "/iphone-15/static/media/iphone-hand.8483615153f96b8884ad.png",
@@ -10,12 +10,12 @@
     "index.html": "/iphone-15/index.html",
     "static/media/store.svg": "/iphone-15/static/media/store.57ae54d1966c84d102bc33daea9a2b3f.svg",
     "static/media/search.svg": "/iphone-15/static/media/search.fb9cc63e85e6aac735d070a707f288ad.svg",
-    "main.3a610ff7.css.map": "/iphone-15/static/css/main.3a610ff7.css.map",
-    "main.e1e7d00b.js.map": "/iphone-15/static/js/main.e1e7d00b.js.map",
+    "main.d5826189.css.map": "/iphone-15/static/css/main.d5826189.css.map",
+    "main.ce690408.js.map": "/iphone-15/static/js/main.ce690408.js.map",
     "787.0c452b35.chunk.js.map": "/iphone-15/static/js/787.0c452b35.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a610ff7.css",
-    "static/js/main.e1e7d00b.js"
+    "static/css/main.d5826189.css",
+    "static/js/main.ce690408.js"
   ]
 }
