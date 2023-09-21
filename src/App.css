@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue: #0071e3;
+  --purple-linear: linear-gradient(180deg, #ffb6ff, #b344ff);
+  --apple-white: #f2f2f2;
+  --white:  #fff;
+  --black: #000;
+  --title-grey: #86868b;
+  --link-blue: #2997ff;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
@@ -74,8 +84,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #webgi-canvas-container .button {
-  background: #0071e3;
-  color: #fff;
+  background: var(--blue);
+  color:var(--apple-white);
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -107,7 +117,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .display-section .title {
-  color: #86868b;
+  color: var(--title-grey);
   font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.022em;
@@ -117,7 +127,7 @@ body::-webkit-scrollbar-thumb {
 .display-section .text {
   display: inline-block;
   color: transparent;
-  background-image: linear-gradient(180deg, #ffb6ff, #b344ff);
+  background-image: var(--purple-linear);
   -webkit-background-clip: text;
   background-clip: text;
   padding-top: 0.5px;
@@ -133,8 +143,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .display-section .button {
-  background: #0071e3;
-  color: #fff;
+  background: var(--blue);
+  color:var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -148,8 +158,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .display-section .back-button {
-  background: white;
-  color: black;
+  background: var(--white);
+  color: var(--black);
   border: none;
   border-radius: 50px;
   padding: 10px 30px;
@@ -168,7 +178,7 @@ nav.nav-wrapper {
   height: 48px;
   max-height: 44px;
   font-size: 17px;
-  background-color: #f2f2f2;
+  background-color: var(--apple-white);
 }
 
 nav .nav-content {
@@ -218,7 +228,7 @@ nav .link-styled {
 }
 
 .jumbotron-section .title {
-  color: #86868b;
+  color: var(--title-grey);
   font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.022em;
@@ -237,7 +247,7 @@ nav .link-styled {
 .jumbotron-section .text {
   display: inline-block;
   color: transparent;
-  background-image: linear-gradient(180deg, #ffb6ff, #b344ff);
+  background-image: var(--purple-linear);
   -webkit-background-clip: text;
   background-clip: text;
   padding-top: 0.5px;
@@ -264,8 +274,8 @@ nav .link-styled {
 }
 
 .jumbotron-section .button {
-  background: #0071e3;
-  color: #fff;
+  background: var(--blue);
+  color:var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -280,7 +290,7 @@ nav .link-styled {
 
 .jumbotron-section .link {
   text-decoration: none;
-  color: #2997ff;
+  color: var(--link-blue);
   font-size: 21px;
   font-weight: 400;
   margin: 0 14px;
@@ -397,8 +407,8 @@ nav .link-styled {
 }
 
 .sound-section .button {
-  background: #0071e3;
-  color: #fff;
+  background: var(--blue);
+  color:var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -414,7 +424,7 @@ nav .link-styled {
 
 .sound-section .link {
   text-decoration: none;
-  color: #2997ff;
+  color: var(--link-blue);
   font-size: 21px;
   font-weight: 400;
   margin: 0 14px;

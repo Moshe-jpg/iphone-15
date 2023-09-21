@@ -68,6 +68,20 @@ const WebgiViewer = forwardRef((props,ref) => {
       if(position && target && onUpdate) {
         scrollAnimation(position, target, isMobile, onUpdate);
       }
+
+      gsap.to("#webgi-canvas-container", {
+        opacity: 0,
+        // duration: 1,
+        scrollTrigger: {
+          trigger: ".display-section",
+          start: "top top",
+          end: "bottom 10%",
+          scrub: 1.5,
+        },
+      });
+      
+      
+  
     }, []
   );
 

@@ -6,6 +6,10 @@ import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import SoundSection from "./components/SoundSection";
 import DisplaySection from "./components/DisplaySection";
+// import Macbooks from "./components/Products";
+// import Ipads from "./components/Products";
+// import Airpods from "./components/Products";
+// import AppleWatch from "./components/Products";
 
 function App() {
   const WebgiViewerRef = useRef();
@@ -27,6 +31,10 @@ function App() {
           <DisplaySection triggerPreview={handlePreview} />
         </div>
         <WebgiViewer contentRef={contentRef} ref={WebgiViewerRef} />
+        {/* <Macbooks />
+        <Ipads />
+        <Airpods />
+        <AppleWatch /> */}
       </div>
     </>
   );

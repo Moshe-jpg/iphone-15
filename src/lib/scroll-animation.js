@@ -1,8 +1,8 @@
 import gsap from "gsap";
 
 export const scrollAnimation = (position, target, isMobile, onUpdate) => {
-  const ti = gsap.timeline();
-  ti.to(position, {
+  const tl = gsap.timeline();
+  tl.to(position, {
     x: !isMobile ? -3.38 : -7.0,
     y: !isMobile ? -10.74 : -12.2,
     z: !isMobile ? -5.93 : -6.0,
@@ -81,5 +81,5 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         scrub: 2,
         immediateRender: false,
       },
-    });
+    })
 };
