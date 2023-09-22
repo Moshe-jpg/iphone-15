@@ -10,7 +10,7 @@ const SoundSection = () => {
   }
 
   return (
-    <div className="sound-section wrapper">
+    <section className="sound-section wrapper">
       <div className="body">
         <div className="sound-section-content content">
           <h2 className="title">New Sound System</h2>
@@ -30,7 +30,7 @@ const SoundSection = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

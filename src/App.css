@@ -10,7 +10,7 @@
   --blue: #0071e3;
   --purple-linear: linear-gradient(180deg, #ffb6ff, #b344ff);
   --apple-white: #f2f2f2;
-  --white:  #fff;
+  --white: #fff;
   --black: #000;
   --title-grey: #86868b;
   --link-blue: #2997ff;
@@ -20,11 +20,19 @@
   display: none;
 }
 
-button, a, li, ul, ol {
+button,
+a,
+li,
+ul,
+ol {
   all: unset;
 }
 
-button, a, img[alt="Apple"], img[alt="search"], img[alt="store"] {
+button,
+a,
+img[alt="Apple"],
+img[alt="search"],
+img[alt="store"] {
   cursor: pointer;
 }
 
@@ -85,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 
 #webgi-canvas-container .button {
   background: var(--blue);
-  color:var(--apple-white);
+  color: var(--apple-white);
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -111,7 +119,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   padding: 50px 0 400px 0;
   height: 100vh;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   opacity: 0;
   position: relative;
 }
@@ -144,7 +152,7 @@ body::-webkit-scrollbar-thumb {
 
 .display-section .button {
   background: var(--blue);
-  color:var(--apple-white);
+  color: var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -155,6 +163,43 @@ body::-webkit-scrollbar-thumb {
   padding: 8px 16px;
   border-radius: 980px;
   margin: 15px;
+  position: relative;
+}
+
+.button-container {
+  position: relative;
+  /* width: 100%; */
+  text-align: center;
+  margin-top: 25px;
+}
+
+.button-container .arrow {
+  position: absolute;
+  filter: invert(1);
+  width: 40px;
+  animation: throb 0.8s infinite alternate;
+}
+
+@keyframes throb {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.2;
+  }
+}
+
+.button-container .arrow.top-left {
+  transform: scaleY(-1) rotate(-25deg);
+  top: 5px;
+  left: -45px;
+}
+
+.button-container .arrow.top-right {
+  transform: scaleX(-1) rotate(-25deg);
+  bottom: 5px;
+  right: -45px;
 }
 
 .display-section .back-button {
@@ -183,7 +228,7 @@ nav.nav-wrapper {
 
 nav .nav-content {
   margin: 0 auto;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   width: 100%;
   max-width: 1024px;
   padding: 0 22px;
@@ -216,7 +261,7 @@ nav .link-styled {
   margin-right: auto;
   max-width: 980px;
   width: 100%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   height: calc(100vh - 40px);
   display: flex;
   align-items: center;
@@ -275,7 +320,7 @@ nav .link-styled {
 
 .jumbotron-section .button {
   background: var(--blue);
-  color:var(--apple-white);
+  color: var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -320,7 +365,7 @@ nav .link-styled {
 .loader {
   position: fixed;
   z-index: 2;
-  background-color: white;
+  background-color: var(--white);
   top: 0;
   left: 0;
   width: 100%;
@@ -408,7 +453,7 @@ nav .link-styled {
 
 .sound-section .button {
   background: var(--blue);
-  color:var(--apple-white);
+  color: var(--apple-white);
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -431,6 +476,135 @@ nav .link-styled {
   cursor: pointer;
 }
 
+.specs-section {
+  background: var(--white);
+}
+
+.specs-section.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  /* height: 100vh; */
+  /* opacity: 0; */
+  position: relative;
+}
+
+.specs-outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.specs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.specs-container.left {
+  flex-direction: row;
+}
+
+.specs-container.right {
+  flex-direction: row-reverse;
+}
+
+.specs-container .content {
+  width: 50%;
+  font-size: 22px;
+  text-align: center;
+  color: var(--black);
+}
+
+.specs-container .content span {
+  color: var(--blue);
+  font-size: 36px;
+}
+
+.specs-container .img-container {
+  width: 50%;
+  text-align: center;
+}
+
+.specs-container .img-container img {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.specs-section .buy-iphone {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.specs-section .buy-iphone .section-title {
+  font-size: 28px;
+  color: var(--black);
+}
+
+.specs-section .buy-iphone .section-title span {
+  color: transparent;
+  background-image: var(--purple-linear);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 36px;
+}
+
+.iphone-image {
+  width: 100%;
+  text-align: center;
+}
+
+.iphone-color-image {
+  width: 300px;
+}
+
+.color-picker {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.5px solid var(--black);
+  border-radius: 50%;
+  margin: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.color-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 250px;
+    margin: 0 auto;
+}
+
+#natural-titanium {
+  background: linear-gradient(90deg, #8a8e91, #a3a7aa, #8a8e91);
+}
+
+#white-titanium {
+  background: var(--white);
+}
+
+#black-titanium {
+  background: #000000;
+}
+
+#blue-titanium {
+  background: #0071e3;
+}
+
 @media screen and (max-width: 990px) {
   .jumbotron-section .iphone-img,
   nav .link-styled {
@@ -446,7 +620,7 @@ nav .link-styled {
   .display-section.wrapper {
     padding-left: 20px;
     padding-right: 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     text-align: center;
   }
 

@@ -20,7 +20,7 @@ const Jumbotron = () => {
   }
 
   return (
-    <div className="jumbotron-section wrapper">
+    <section className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
       <h3 className="title-header">iPhone 15 Pro</h3>
       <p className="text">Big & Bigger</p>
@@ -38,7 +38,7 @@ const Jumbotron = () => {
         </li>
       </ul>
       <img className="iphone-img" src={holdingIphone} alt="iPhone"></img>
-    </div>
+    </section>
   );
 };
 

@@ -188,14 +188,14 @@ const WebgiViewer = forwardRef((props,ref) => {
   }, [canvasContainerRef, viewerRef, positionRef, cameraRef, targetRef]);
 
   return (
-    <div id='webgi-canvas-container' ref={canvasContainerRef} >
+    <section id='webgi-canvas-container' ref={canvasContainerRef} >
       <canvas id='webgi-canvas' ref={canvasRef} />
       {
         previewMode && (
           <button className="button" onClick={handleExit}>Exit</button>
         )
       }
-    </div>
+    </section>
   );
 });
 
