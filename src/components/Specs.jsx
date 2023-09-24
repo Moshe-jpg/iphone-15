@@ -1,6 +1,6 @@
 import React from "react";
 import appleChip from "../assets/images/a17.png";
-import titaniumIphone from "../assets/images/titanium-iphone.png"
+import titaniumIphone from "../assets/images/titanium-bg.jpeg"
 import actionBtn from "../assets/images/action-button.png";
 import usbc from "../assets/images/usbc.png";
 import BuyIphone from "./BuyIphone";

@@ -25,7 +25,7 @@ const Jumbotron = () => {
       <h3 className="title-header">iPhone 15 Pro</h3>
       <p className="text">Big & Bigger</p>
       <span className="description">
-        From $1,000.00/mo or $22.00 before trade-in
+      From $1,059.00 or $44.12/mo. before trade-in*
       </span>
       <ul className="links">
         <li>

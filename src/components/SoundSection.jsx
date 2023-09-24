@@ -16,7 +16,7 @@ const SoundSection = () => {
           <h2 className="title">New Sound System</h2>
           <p className="text">Feel The Base.</p>
           <span className="description">
-            From $1,000.00/mo or $22.00 before trade-in
+          From $1,059.00 or $44.12/mo. before trade-in*
           </span>
           <ul className="links">
             <li>

@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
 :root {
@@ -43,6 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
   color: #f5f5f7;
+  overflow-x: hidden;
 }
 
 code {
@@ -542,7 +545,11 @@ nav .link-styled {
 }
 
 .specs-section .buy-iphone {
-  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* height: 90vh; */
   width: 100%;
   text-align: center;
 }
@@ -550,6 +557,7 @@ nav .link-styled {
 .specs-section .buy-iphone .section-title {
   font-size: 28px;
   color: var(--black);
+  margin-top: 50px;
 }
 
 .specs-section .buy-iphone .section-title span {
@@ -574,7 +582,7 @@ nav .link-styled {
   height: 1.5rem;
   border: 0.5px solid var(--black);
   border-radius: 50%;
-  margin: 0 5px;
+  margin-bottom: 100px;
   box-sizing: border-box;
   cursor: pointer;
   transition: 0.5s ease-in-out;
@@ -586,7 +594,7 @@ nav .link-styled {
   justify-content: space-evenly;
   flex-direction: row;
   width: 250px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 #natural-titanium {
@@ -602,7 +610,99 @@ nav .link-styled {
 }
 
 #blue-titanium {
-  background: #0071e3;
+  background: #535d67;
+}
+
+.buying-options-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: var(--black);
+}
+
+.buying-options-container h4 {
+  font-size: 24px;
+  text-align: center;
+  color: var(--title-grey);
+}
+
+.buying-options-container h4 span {
+  color: var(--black);
+}
+
+.buying-options-container .btn-container {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.buying-options-container .btn-container .buying-options-btn {
+  width: 350px;
+  height: 200px;
+  margin: 25px;
+  border: 1px solid var(--black);
+  border-radius: 12px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.buying-options-container .btn-container .buying-options-btn header {
+  font-weight: 600;
+}
+
+.buying-options-container .btn-container .buying-options-btn footer {
+  font-size: 12px;
+  letter-spacing: -0.01em;
+}
+
+.box-contents-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: var(--black);
+}
+
+
+.box-contents-container h4 {
+  color: var(--black);
+  font-size: 40px;
+  width: 100%;
+  margin: 50px 0 100px;
+  padding: 0 16px;
+}
+
+.box-contents-container .contents-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 350px;
+  margin-bottom: 50px;
+}
+.box-contents-container .contents-container img {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.box-contents-container .contents-container p {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: var(--black);
 }
 
 @media screen and (max-width: 990px) {
@@ -648,5 +748,28 @@ nav .link-styled {
 
   .sound-section .content {
     max-width: 100%;
+  }
+
+  .specs-section .buy-iphone .section-title span {
+    display: block;
+  }
+
+  .specs-container.left,
+  .specs-container.right {
+    flex-direction: column;
+    text-align: center;
+    height: unset;
+    flex-wrap: wrap;
+    width: 350px;
+    min-height: 90vh;
+  }
+
+  .specs-container .content,
+  .specs-container .img-container {
+    width: 100%;
+  }
+
+  .specs-container .img-container img {
+    width: 100%;
   }
 }
