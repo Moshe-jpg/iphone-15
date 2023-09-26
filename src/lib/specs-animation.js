@@ -13,11 +13,10 @@ const specsAnimation = () => {
 
   mm.add("(min-width: 999.1px)", () => {
     imgElems.forEach((img) => {
-      gsap.set(img, { autoAlpha: 0, clipPath: "circle(0% at 50% 50%)" });
+      gsap.set(img, { clipPath: "circle(0% at 50% 50%)" });
       gsap.to(img, {
-        autoAlpha: 1,
-        duration: 2,
         clipPath: "circle(100% at 50% 50%)",
+        duration: 1.5,
         scrollTrigger: {
           trigger: img,
           start: "top 85%",

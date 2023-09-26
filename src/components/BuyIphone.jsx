@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import boxContentsAnimation from "../lib/box-contents-animation";
 import naturalTitanium from "../assets/images/natural-titanium.png";
 import whiteTitanium from "../assets/images/white-titanium.png";
 import blackTitanium from "../assets/images/black-titanium.png";
@@ -33,10 +34,16 @@ class BuyIphone extends Component {
     this.state = {
       selectedColor: this.colors[0], // Default to the first color
     };
+
+    this.boxContentsRef = React.createRef();
   }
 
   handleColorClick(color) {
     this.setState({ selectedColor: color });
+  }
+
+  componentDidMount() {
+    boxContentsAnimation();
   }
 
   render() {
@@ -79,7 +86,8 @@ class BuyIphone extends Component {
             <button className="buying-options-btn">
               <header>Finance</header>
               <p>
-                $44.12/mo.per month for 24 mo. monthsafter trade-in *<br></br><br></br>
+                $44.12/mo.per month for 24 mo. monthsafter trade-in *<br></br>
+                <br></br>
                 From $21.77/mo.per month over 36 mo.months after trade-in with
                 select carrier deals
               </p>
@@ -87,13 +95,13 @@ class BuyIphone extends Component {
             </button>
           </div>
         </div>
-        <div className="box-contents-container">
+        <div className="box-contents-container" ref={this.boxContentsRef}>
           <h4>What's in the Box?</h4>
-          <div className="contents-container">
+          <div className="contents-container container-1">
             <img src={boxIphone} alt="iPhone 15 Pro"></img>
             <p>iPhone 15 Pro</p>
           </div>
-          <div className="contents-container">
+          <div className="contents-container container-2">
             <img src={boxCharger} alt="USB-C Charger Cable"></img>
             <p>USB-C Charge Cable</p>
           </div>
