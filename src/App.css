@@ -529,6 +529,11 @@ nav .link-styled {
   color: var(--black);
 }
 
+.specs-container .content h3 {
+  color: var(--black);
+  font-size: 26px;
+}
+
 .specs-container .content span {
   color: var(--blue);
   font-size: 36px;
@@ -796,8 +801,8 @@ nav .link-styled {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--title-grey);
   border-radius: 50%;
   cursor: pointer;
@@ -806,8 +811,6 @@ nav .link-styled {
 .dot.active {
   background: var(--black);
 }
-
-
 
 @media screen and (max-width: 990px) {
   .jumbotron-section .iphone-img,
@@ -865,12 +868,27 @@ nav .link-styled {
     height: unset;
     flex-wrap: wrap;
     width: 350px;
-    min-height: 90vh;
+    min-height: 80vh;
   }
 
   .specs-container .content,
   .specs-container .img-container {
     width: 100%;
+  }
+
+  .specs-container .content h3 {
+    color: var(--black);
+    font-size: 22px;
+  }
+
+  .specs-container .content h3 p {
+    padding: 15px 0;
+  }
+  
+  .specs-container .content span {
+    color: var(--blue);
+    font-size: 32px;
+    line-height: 1;
   }
 
   .specs-container .img-container img {

@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import specsAnimation from "../lib/specs-animation";
 import appleChip from "../assets/images/a17.png";
-import titaniumIphone from "../assets/images/titanium-bg.jpeg"
+import titaniumIphone from "../assets/images/titanium-bg.jpeg";
 import actionBtn from "../assets/images/action-button.png";
 import usbc from "../assets/images/usbc.png";
 import BuyIphone from "./BuyIphone";
 
 const Specs = () => {
-    
+  const specsRef = useRef(null);
+
+  useEffect(() => {
+    specsAnimation();
+  }, []);
+
   const specsArray = [
     {
       spanText: "Enter A17 Pro.",
@@ -19,15 +25,15 @@ const Specs = () => {
     {
       spanText: "Titanium.",
       textLineOne: "So light.",
-     textLineTwo: "So Pro.",
+      textLineTwo: "So Pro.",
       imgSrc: titaniumIphone,
       altTag: "Titanium casing",
       side: "right",
     },
     {
       spanText: "All-new Action button.",
-      textLineOne: "What will",
-      textLineTwo: "yours do?",
+      textLineOne: "What will yours do?",
+      textLineTwo: "",
       imgSrc: actionBtn,
       altTag: "Action button",
       side: "left",
@@ -43,21 +49,23 @@ const Specs = () => {
   ];
 
   return (
-    <section className="specs-section wrapper">
+    <section className="specs-section wrapper" ref={specsRef}>
       <ul className="specs-outer-container">
-      {specsArray.map((specs, index) => (
+        {specsArray.map((specs, index) => (
           <li key={index} className={`specs-container ${specs.side}`}>
-             <div className="content">
-            <h3>
-              <span>{specs.spanText}</span>
-              <br></br>
-              {specs.textLineOne}<br></br>
-              {specs.textLineTwo}
-            </h3>
-          </div>
-          <div className="img-container">
-            <img src={specs.imgSrc} alt={specs.altTag}></img>
-          </div>
+            <div className="content">
+              <h3>
+                <span>{specs.spanText}</span>
+                <p>
+                  {specs.textLineOne}
+                  <br></br>
+                  {specs.textLineTwo}
+                </p>
+              </h3>
+            </div>
+            <div className="img-container">
+              <img src={specs.imgSrc} alt={specs.altTag}></img>
+            </div>
           </li>
         ))}
       </ul>
