@@ -16,6 +16,7 @@
   --black: #000;
   --title-grey: #86868b;
   --link-blue: #2997ff;
+  --light-transparent: rgba(255, 255, 255, 0.3);
 }
 
 *::-webkit-scrollbar {
@@ -544,6 +545,10 @@ nav .link-styled {
   border-radius: 15px;
 }
 
+.specs-container .img-container img[alt="A17 Pro info"], .specs-container .img-container img[alt="Titanium casing"] {
+  transform: scale(0.7);
+}
+
 .specs-section .buy-iphone {
   display: flex;
   align-items: center;
@@ -626,6 +631,7 @@ nav .link-styled {
   font-size: 24px;
   text-align: center;
   color: var(--title-grey);
+  padding: 0 15px;
 }
 
 .buying-options-container h4 span {
@@ -682,7 +688,7 @@ nav .link-styled {
   font-size: 40px;
   width: 100%;
   margin: 50px 0 100px;
-  padding: 0 16px;
+  padding: 0 15px;
 }
 
 .box-contents-container .contents-container {
@@ -704,6 +710,104 @@ nav .link-styled {
   font-size: 14px;
   color: var(--black);
 }
+
+/* more products */
+
+.more-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.more-products h5 {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.more-products h5 span {
+  display: block;
+  color: transparent;
+  background-image: var(--purple-linear);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding-top: 0.5px;
+  margin-top: 16px;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  height: 300px;
+  width: 300px;
+  background: var(--light-transparent);
+  border-radius: 15px;
+  margin: 25px 0;
+}
+
+.carousel-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.carousel-item img {
+  height: auto;
+  width: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: var(--light-transparent);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--title-grey);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--black);
+}
+
+
 
 @media screen and (max-width: 990px) {
   .jumbotron-section .iphone-img,
