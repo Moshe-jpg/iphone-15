@@ -26,7 +26,7 @@ const boxContentsAnimation = () => {
           scrollTrigger: {
             trigger: img,
             start: "top 85%",
-            scrub: true,
+            once: true,
           },
         });
       });

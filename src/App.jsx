@@ -8,7 +8,7 @@ import SoundSection from "./components/SoundSection";
 import DisplaySection from "./components/DisplaySection";
 import Specs from "./components/Specs";
 import MoreProducts from "./components/MoreProducts";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const WebgiViewerRef = useRef();
@@ -32,6 +32,7 @@ function App() {
         <WebgiViewer contentRef={contentRef} ref={WebgiViewerRef} />
         <Specs />
         <MoreProducts />
+        <Footer />
       </div>
     </>
   );
