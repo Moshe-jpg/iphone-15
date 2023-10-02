@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ios17 from "../assets/images/ios-17.png";
 import boxContentsAnimation from "../lib/box-contents-animation";
 import naturalTitanium from "../assets/images/natural-titanium.png";
 import whiteTitanium from "../assets/images/white-titanium.png";
@@ -18,16 +19,16 @@ class BuyIphone extends Component {
         imgSrc: naturalTitanium,
       },
       {
+        id: "blue-titanium",
+        imgSrc: blueTitanium,
+      },
+      {
         id: "white-titanium",
         imgSrc: whiteTitanium,
       },
       {
         id: "black-titanium",
         imgSrc: blackTitanium,
-      },
-      {
-        id: "blue-titanium",
-        imgSrc: blueTitanium,
       },
     ];
 
@@ -49,16 +50,28 @@ class BuyIphone extends Component {
   render() {
     return (
       <div className="buy-iphone">
+        <div className="ios-container">
+          <div className="ios-header">
+            <span>iOS 17</span>
+            <h4>Every day. More extraordinary.</h4>
+          </div>
+          <button>Learn More</button>
+          <img src={ios17} className="ios-17" alt="ios 17"></img>
+        </div>
         <h4 className="section-title">
           <span>Color.</span> Which is best for you?
         </h4>
-
         <div className="iphone-image">
-          <img
-            className="iphone-color-image"
-            src={this.state.selectedColor.imgSrc}
-            alt={`iPhone ${this.state.selectedColor.id}`}
-          />
+          {this.colors.map((color) => (
+            <img
+              key={color.id}
+              className={`iphone-color-image ${
+                this.state.selectedColor.id === color.id ? "active" : ""
+              }`}
+              src={color.imgSrc}
+              alt={`iPhone ${color.id}`}
+            />
+          ))}
         </div>
 
         <div className="color-options">
@@ -72,6 +85,7 @@ class BuyIphone extends Component {
             ></div>
           ))}
         </div>
+
         <div className="buying-options-container">
           <h4>
             <span>Payment options. </span>
