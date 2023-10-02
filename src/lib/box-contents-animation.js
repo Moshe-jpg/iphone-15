@@ -7,11 +7,29 @@ const boxContentsAnimation = () => {
 
   let mm = gsap.matchMedia();
 
+  const iosContainerImg = document.querySelector(".ios-17");
+
   const boxContent = gsap.utils.toArray(
     ".box-contents-container .contents-container"
   );
 
   mm.add("(min-width: 999.1px)", () => {
+
+    gsap.set(iosContainerImg, {
+      autoAlpha: 0,
+      y: "150px",
+    })
+    gsap.to(iosContainerImg, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: iosContainerImg,
+        start: "top 85%",
+        once: true,
+      },
+    })
+
     boxContent.forEach((content) => {
       const boxImg = gsap.utils.toArray(content.querySelector("img"));
 
@@ -34,6 +52,23 @@ const boxContentsAnimation = () => {
   });
 
   mm.add("(max-width: 999px)", () => {
+
+    gsap.set(iosContainerImg, {
+      autoAlpha: 0,
+      y: "100px",
+    })
+    gsap.to(iosContainerImg, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: iosContainerImg,
+        start: "top 90%",
+        end: "top 75%",
+        once: true,
+      },
+    })
+
     const boxImg1 = document.querySelector(
       ".box-contents-container .contents-container img[alt='iPhone 15 Pro']"
     );
@@ -47,7 +82,7 @@ const boxContentsAnimation = () => {
     gsap.to(boxImg1, {
       x: 0,
       autoAlpha: 1,
-      duration: 1.5,
+      duration: 1,
       scrollTrigger: {
         trigger: boxImg1,
         start: "top 90%",
@@ -58,7 +93,7 @@ const boxContentsAnimation = () => {
     gsap.to(boxImg2, {
       x: 0,
       autoAlpha: 1,
-      duration: 1.5,
+      duration: 1,
       scrollTrigger: {
         trigger: boxImg2,
         start: "top 90%",
