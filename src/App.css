@@ -755,13 +755,6 @@ nav .link-styled {
   overflow: hidden;
 }
 
-/* @media screen and (min-width:999.1px){
-  .box-contents-container .contents-container img {
-    transform: translateY(-110%);
-    transition: transform 1.5s ease-in-out;
-  }
-} */
-
 .box-contents-container h4 {
   color: var(--black);
   font-size: 40px;
@@ -892,7 +885,7 @@ nav .link-styled {
 .footer {
   width: 100%;
   min-height: 70vh;
-  padding: 50px 15px;
+  padding: 50px 20px;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
@@ -904,7 +897,7 @@ nav .link-styled {
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 980px;
   width: 100%;
   margin: 0 auto;
 }

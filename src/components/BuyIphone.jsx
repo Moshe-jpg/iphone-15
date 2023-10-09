@@ -33,7 +33,7 @@ class BuyIphone extends Component {
     ];
 
     this.state = {
-      selectedColor: this.colors[0], // Default to the first color
+      selectedColor: this.colors[0],
     };
 
     this.boxContentsRef = React.createRef();
@@ -43,7 +43,51 @@ class BuyIphone extends Component {
     this.setState({ selectedColor: color });
   }
 
+  handleSwipeStart = (e) => {
+    this.touchStartX = e.touches[0].clientX;
+    this.swipeStart = Date.now(); // Record start time
+  };
+
+  handleSwipeEnd = (e) => {
+    this.touchEndX = e.changedTouches[0].clientX; // Record end position
+    this.swipeEnd = Date.now(); // Record end time
+
+    this.detectSwipe(); // Trigger swipe detection
+  };
+
+  detectSwipe() {
+    const deltaX = this.touchEndX - this.touchStartX; // Horizontal distance traveled
+    const deltaTime = this.swipeEnd - this.swipeStart; // Time duration of the swipe
+
+    // Define thresholds
+    const minDistance = 50; // Minimum distance traveled to be considered a swipe
+    const maxDuration = 500; // Maximum time duration allowed for the swipe
+
+    // Check if the swipe is valid
+    if (Math.abs(deltaX) > minDistance && deltaTime < maxDuration) {
+      const direction = deltaX < 0 ? "left" : "right";
+      this.changeColorOnSwipe(direction);
+    }
+  }
+
+  changeColorOnSwipe(direction) {
+    const currentIndex = this.colors.findIndex(
+      (color) => color.id === this.state.selectedColor.id
+    );
+
+    let newIndex = direction === "left" ? currentIndex + 1 : currentIndex - 1;
+
+    if (newIndex < 0) {
+      newIndex = this.colors.length - 1;
+    } else if (newIndex >= this.colors.length) {
+      newIndex = 0;
+    }
+
+    this.setState({ selectedColor: this.colors[newIndex] });
+  }
+
   componentDidMount() {
+    this.imageContainerRef = React.createRef();
     boxContentsAnimation();
   }
 
@@ -61,7 +105,13 @@ class BuyIphone extends Component {
         <h4 className="section-title">
           <span>Color.</span> Which is best for you?
         </h4>
-        <div className="iphone-image">
+        <div
+          className="iphone-image"
+          ref={this.imageContainerRef}
+          onTouchStart={this.handleSwipeStart}
+          onTouchMove={this.handleSwipeMove}
+          onTouchEnd={this.handleSwipeEnd}
+        >
           {this.colors.map((color) => (
             <img
               key={color.id}
